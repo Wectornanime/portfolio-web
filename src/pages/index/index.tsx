@@ -4,8 +4,37 @@ import { OpenInNewRounded as OpenInNewRoundedIcon } from "@mui/icons-material";
 
 export default function IndexPage() {
   return (
-    <main className="flex flex-col items-center gap-2">
-      <section className="flex flex-col items-center sm:flex-row gap-5 px-8 mb-4">
+    <main className="flex flex-col items-center gap-2 px-8">
+      <section className="mb-4">*hello*</section>
+
+      <section className="full relative flex justify-center mt-4">
+        <div className="flex gap-2 absolute -bottom-2">
+          <Button
+            as="a"
+            className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
+            href="https://google.com"
+            radius="sm"
+            target="_blank"
+          >
+            <p>Github</p>
+            <OpenInNewRoundedIcon fontSize="inherit" />
+          </Button>
+          <Button
+            as="a"
+            className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
+            href="https://google.com"
+            radius="sm"
+            target="_blank"
+          >
+            <p>LinkedIn</p>
+            <OpenInNewRoundedIcon fontSize="inherit" />
+          </Button>
+        </div>
+      </section>
+
+      <section>*projects*</section>
+
+      <section className="flex flex-col items-center sm:flex-row gap-5">
         <Card className="shrink-0 fit">
           <Image
             alt="Woman listing to music"
@@ -42,30 +71,9 @@ export default function IndexPage() {
         </p>
       </section>
 
-      <section className="full relative flex justify-center mt-4">
-        <div className="flex gap-2 absolute -bottom-2">
-          <Button
-            as="a"
-            className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
-            href="https://google.com"
-            radius="sm"
-            target="_blank"
-          >
-            <p>Github</p>
-            <OpenInNewRoundedIcon fontSize="inherit" />
-          </Button>
-          <Button
-            as="a"
-            className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
-            href="https://google.com"
-            radius="sm"
-            target="_blank"
-          >
-            <p>LinkedIn</p>
-            <OpenInNewRoundedIcon fontSize="inherit" />
-          </Button>
-        </div>
-      </section>
+      <section>*skills*</section>
+
+      <section>*certification*</section>
     </main>
   );
 }

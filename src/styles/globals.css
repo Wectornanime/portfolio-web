@@ -3,3 +3,11 @@
 
 @source '../../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}';
 @custom-variant dark (&:is(.dark *));
+
+.full {
+  @apply h-full w-full
+}
+
+.fit {
+  @apply h-fit w-fit
+}

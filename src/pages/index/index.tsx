@@ -1,14 +1,34 @@
-import { Card, CardFooter } from "@heroui/card";
-import { Button, Image } from "@heroui/react";
+import { Card, CardFooter, CardHeader } from "@heroui/card";
+import { Button, Image, ScrollShadow } from "@heroui/react";
 import { OpenInNewRounded as OpenInNewRoundedIcon } from "@mui/icons-material";
 
 export default function IndexPage() {
   return (
-    <main className="flex flex-col items-center gap-2 px-8">
-      <section className="mb-4">*hello*</section>
+    <main className="flex flex-col gap-8 px-8">
+      <section className="flex justify-around items-center">
+        <div>
+          <h1 className="text-3xl sm:text-5xl">
+            <span>
+              Hello. <br />
+              {"Sou "}
+            </span>
+            Wectornanime
+          </h1>
+          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+        </div>
 
-      <section className="full relative flex justify-center mt-4">
-        <div className="flex gap-2 absolute -bottom-2">
+        <div className="shrink-0">
+          <Image
+            alt="Woman listing to music"
+            className="object-cover h-[150px] w-[150px] sm:h-[200px] sm:w-[200px]"
+            src="https://heroui.com/images/hero-card.jpeg"
+          />
+        </div>
+      </section>
+
+      <section className="full flex flex-col relative">
+        <h3 className="text-xl pl-6">Alguns Links</h3>
+        <div className="flex flex-wrap gap-2 justify-center mt-2 full">
           <Button
             as="a"
             className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
@@ -32,7 +52,58 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section>*projects*</section>
+      <section className="flex flex-col full">
+        <h3 className="text-xl mb-3 pl-6">Projetos</h3>
+        <ScrollShadow
+          hideScrollBar
+          className="flex gap-2 w-full"
+          orientation="horizontal"
+        >
+          {[...Array(20)].map((_, index) => (
+            <div key={index} className="fit rounded-md bg-default">
+              <div>
+                <Image
+                  alt="Woman listing to music"
+                  className="object-cover rounded-t-sm"
+                  height={120}
+                  radius="none"
+                  src="https://heroui.com/images/hero-card.jpeg"
+                  width={260}
+                />
+              </div>
+              <div className="px-2">
+                <h4 className="font-bold text-large">Projeto 1</h4>
+                <p className="text-tiny text-wrap h-[100px] w-[220px] line-clamp-6">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Mollitia illum eligendi aut! Explicabo illum fuga excepturi ab
+                  possimus, quas accusantium quam, nam perspiciatis itaque culpa
+                  voluptatibus, tempora dolorem facilis accusamus.
+                </p>
+              </div>
+              <div className="flex justify-around py-2">
+                <Button
+                  className="text-small text-white bg-black/40"
+                  color="default"
+                  radius="sm"
+                  size="sm"
+                  variant="flat"
+                >
+                  Github
+                </Button>
+                <Button
+                  className="text-small text-white bg-black/40"
+                  color="default"
+                  radius="sm"
+                  size="sm"
+                  variant="flat"
+                >
+                  site
+                </Button>
+              </div>
+            </div>
+          ))}
+        </ScrollShadow>
+      </section>
 
       <section className="flex flex-col items-center sm:flex-row gap-5">
         <Card className="shrink-0 fit">
@@ -44,7 +115,7 @@ export default function IndexPage() {
             width={200}
           />
 
-          <CardFooter className="absolute justify-center bottom-0 z-10 overflow-hidden ">
+          <CardFooter className="absolute justify-center bottom-0 z-10 overflow-hidden">
             <Button
               className="text-small text-white bg-black/40"
               color="default"

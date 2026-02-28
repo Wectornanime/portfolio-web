@@ -11,3 +11,17 @@
 .fit {
   @apply h-fit w-fit
 }
+
+@theme {
+  --animate-infinite-scroll: infinite-scroll 10s infinite linear;
+
+  @keyframes infinite-scroll {
+    from {
+      translate: 0;
+    }
+
+    to {
+      translate: -100%;
+    }
+  }
+}

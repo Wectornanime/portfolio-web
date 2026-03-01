@@ -1,5 +1,5 @@
-import { Card, CardFooter, CardHeader } from "@heroui/card";
-import { Button, Image, ScrollShadow } from "@heroui/react";
+import { Card, CardFooter } from "@heroui/card";
+import { Button, Image, ScrollShadow, Tooltip } from "@heroui/react";
 import { OpenInNewRounded as OpenInNewRoundedIcon } from "@mui/icons-material";
 
 export default function IndexPage() {
@@ -36,7 +36,7 @@ export default function IndexPage() {
             radius="sm"
             target="_blank"
           >
-            <p>Github</p>
+            <p className="tracking-wide uppercase">Github</p>
             <OpenInNewRoundedIcon fontSize="inherit" />
           </Button>
           <Button
@@ -46,7 +46,7 @@ export default function IndexPage() {
             radius="sm"
             target="_blank"
           >
-            <p>LinkedIn</p>
+            <p className="tracking-wide uppercase">LinkedIn</p>
             <OpenInNewRoundedIcon fontSize="inherit" />
           </Button>
         </div>
@@ -82,7 +82,7 @@ export default function IndexPage() {
               </div>
               <div className="flex justify-around py-2">
                 <Button
-                  className="text-small text-white bg-black/40"
+                  className="text-tiny tracking-wide uppercase text-white bg-black/40"
                   color="default"
                   radius="sm"
                   size="sm"
@@ -91,7 +91,7 @@ export default function IndexPage() {
                   Github
                 </Button>
                 <Button
-                  className="text-small text-white bg-black/40"
+                  className="text-tiny tracking-wide uppercase text-white bg-black/40"
                   color="default"
                   radius="sm"
                   size="sm"
@@ -105,46 +105,64 @@ export default function IndexPage() {
         </ScrollShadow>
       </section>
 
-      <section className="flex flex-col items-center sm:flex-row gap-5">
-        <Card className="shrink-0 fit">
-          <Image
-            alt="Woman listing to music"
-            className="object-cover"
-            height={200}
-            src="https://heroui.com/images/hero-card.jpeg"
-            width={200}
-          />
-
-          <CardFooter className="absolute justify-center bottom-0 z-10 overflow-hidden">
-            <Button
-              className="text-small text-white bg-black/40"
-              color="default"
-              radius="sm"
-              size="sm"
-              variant="flat"
-            >
-              Download CV
-            </Button>
-          </CardFooter>
-        </Card>
-
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-          excepturi aliquam debitis at maiores minima numquam molestias quod
-          dignissimos dolore tempore obcaecati quos consectetur, eaque rem nulla
-          atque, doloremque explicabo! Quas fugit illo placeat cupiditate
-          obcaecati veniam dolorem, tempora ullam inventore pariatur neque totam
-          cum accusantium maxime vitae, qui deleniti quos. Quod itaque doloribus
-          eos voluptatibus, vero earum veniam labore? Autem beatae sequi
-          deserunt. Tempora vero ut dolores quisquam libero, sunt minus, est
-          rerum sit voluptatem quas sint dignissimos obcaecati eos aliquid.
-          Harum aspernatur totam unde, corrupti consectetur velit pariatur?
-        </p>
+      <section className="flex flex-col full">
+        <h3 className="text-xl mb-3 pl-6">Sobre mim</h3>
+        <div className="flex flex-col items-center sm:flex-row gap-5">
+          <Card className="shrink-0 fit">
+            <Image
+              alt="Woman listing to music"
+              className="object-cover"
+              height={200}
+              src="https://heroui.com/images/hero-card.jpeg"
+              width={200}
+            />
+            <CardFooter className="absolute justify-center bottom-0 z-10 overflow-hidden">
+              <Button
+                className="text-small text-white bg-black/40"
+                color="default"
+                radius="sm"
+                size="sm"
+                variant="flat"
+              >
+                Download CV
+              </Button>
+            </CardFooter>
+          </Card>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
+            excepturi aliquam debitis at maiores minima numquam molestias quod
+            dignissimos dolore tempore obcaecati quos consectetur, eaque rem
+            nulla atque, doloremque explicabo! Quas fugit illo placeat
+            cupiditate obcaecati veniam dolorem, tempora ullam inventore
+            pariatur neque totam cum accusantium maxime vitae, qui deleniti
+            quos. Quod itaque doloribus eos voluptatibus, vero earum veniam
+            labore? Autem beatae sequi deserunt. Tempora vero ut dolores
+            quisquam libero, sunt minus, est rerum sit voluptatem quas sint
+            dignissimos obcaecati eos aliquid. Harum aspernatur totam unde,
+            corrupti consectetur velit pariatur?
+          </p>
+        </div>
       </section>
 
-      <section>*skills*</section>
-
-      <section>*certification*</section>
+      <section className="flex flex-col full">
+        <h3 className="text-xl mb-3 pl-6">Skills</h3>
+        <div className="flex flex-wrap justify-center gap-4">
+          {[...Array(21)].map((_, key) => (
+            <Tooltip
+              key={key}
+              showArrow
+              color="foreground"
+              content="Amazon Web Service"
+              size="sm"
+            >
+              <i className="devicon-amazonwebservices-plain-wordmark text-6xl" />
+            </Tooltip>
+          ))}
+        </div>
+      </section>
+      <section className="flex flex-col full">
+        <h3 className="text-xl mb-3 pl-6">Certificados</h3>
+      </section>
     </main>
   );
 }

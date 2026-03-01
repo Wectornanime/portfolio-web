@@ -153,9 +153,10 @@ export default function IndexPage() {
               showArrow
               color="foreground"
               content="Amazon Web Service"
+              radius="sm"
               size="sm"
             >
-              <i className="devicon-amazonwebservices-plain-wordmark text-6xl" />
+              <i className="devicon-amazonwebservices-plain-wordmark text-4xl sm:text-6xl" />
             </Tooltip>
           ))}
         </div>

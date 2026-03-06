@@ -5,11 +5,12 @@ import {
   Modal,
   ModalBody,
   ModalContent,
-  ScrollShadow,
   Tooltip,
   useDisclosure,
 } from "@heroui/react";
 import { OpenInNewRounded as OpenInNewRoundedIcon } from "@mui/icons-material";
+
+import ProjectsSection from "./sections/projects";
 
 export default function IndexPage() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
@@ -64,58 +65,7 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="flex flex-col full">
-          <h3 className="text-xl mb-3 pl-6">Projetos</h3>
-          <ScrollShadow
-            hideScrollBar
-            className="flex gap-2 w-full"
-            orientation="horizontal"
-          >
-            {[...Array(20)].map((_, index) => (
-              <div key={index} className="fit rounded-md bg-default">
-                <div>
-                  <Image
-                    alt="Woman listing to music"
-                    className="object-cover rounded-t-sm"
-                    height={120}
-                    radius="none"
-                    src="https://heroui.com/images/hero-card.jpeg"
-                    width={260}
-                  />
-                </div>
-                <div className="px-2">
-                  <h4 className="font-bold text-large">Projeto 1</h4>
-                  <p className="text-tiny text-wrap h-[100px] w-[220px] line-clamp-6">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                    Mollitia illum eligendi aut! Explicabo illum fuga excepturi
-                    ab possimus, quas accusantium quam, nam perspiciatis itaque
-                    culpa voluptatibus, tempora dolorem facilis accusamus.
-                  </p>
-                </div>
-                <div className="flex justify-around py-2">
-                  <Button
-                    className="text-tiny tracking-wide uppercase text-white bg-black/40"
-                    color="default"
-                    radius="sm"
-                    size="sm"
-                    variant="flat"
-                  >
-                    Github
-                  </Button>
-                  <Button
-                    className="text-tiny tracking-wide uppercase text-white bg-black/40"
-                    color="default"
-                    radius="sm"
-                    size="sm"
-                    variant="flat"
-                  >
-                    site
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </ScrollShadow>
-        </section>
+        <ProjectsSection />
 
         <section className="flex flex-col full">
           <h3 className="text-xl mb-3 pl-6">Sobre mim</h3>

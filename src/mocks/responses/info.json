@@ -1,0 +1,93 @@
+{
+  "imageUrl": "https://img.freepik.com/premium-photo/random-image_590832-9664.jpg",
+  "name": "Wectornanime",
+  "lastName": "Felipe",
+  "subtitle": "Desenvolvedor Full Stack",
+  "aboutMe": "Sou apaixonado por tecnologia e desenvolvimento de aplicações web modernas. Tenho experiência em front-end e back-end, sempre buscando aprender novas ferramentas e boas práticas.",
+  "links": [
+    {
+      "id": 1,
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/in/wectornanime"
+    },
+    {
+      "id": 2,
+      "title": "GitHub",
+      "link": "https://github.com/wectornanime"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Sistema de Gestão de Tarefas",
+      "text": "Aplicação web para gerenciamento de tarefas com autenticação de usuários, CRUD completo e interface responsiva.",
+      "imageUrl": "https://www.webdevelopersnotes.com/wp-content/uploads/random-image-display-using-javascript-2.png",
+      "links": [
+        {
+          "id": 1,
+          "title": "Repositório GitHub",
+          "link": "https://github.com/wectornanime/task-manager"
+        },
+        {
+          "id": 2,
+          "title": "Demo Online",
+          "link": "https://task-manager.wectornanime.dev"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Blog Pessoal",
+      "text": "Blog pessoal desenvolvido em Next.js, com suporte a Markdown, SEO otimizado e integração com CMS headless.",
+      "imageUrl": "https://www.webdevelopersnotes.com/wp-content/uploads/random-image-display-using-javascript-2.png",
+      "links": [
+        {
+          "id": 1,
+          "title": "Repositório GitHub",
+          "link": "https://github.com/lucassilva/personal-blog"
+        },
+        {
+          "id": 2,
+          "title": "Acessar Blog",
+          "link": "https://blog.lucassilva.dev"
+        }
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "title": "React - Fundamentos",
+      "imageUrl": "https://www.webdevelopersnotes.com/wp-content/uploads/random-image-display-using-javascript-2.png",
+      "link": "https://certificates.com/react-fundamentals",
+      "pdfFileUrl": "https://example.com/certificates/react-fundamentals.pdf"
+    },
+    {
+      "title": "Node.js Avançado",
+      "imageUrl": "https://www.webdevelopersnotes.com/wp-content/uploads/random-image-display-using-javascript-2.png",
+      "link": null,
+      "pdfFileUrl": "https://example.com/certificates/node-advanced.pdf"
+    }
+  ],
+  "skills": [
+    {
+      "title": "JavaScript",
+      "iconUrl": "devicon-javascript-plain"
+    },
+    {
+      "title": "TypeScript",
+      "iconUrl": "devicon-typescript-plain"
+    },
+    {
+      "title": "React",
+      "iconUrl": "devicon-react-original"
+    },
+    {
+      "title": "Node.js",
+      "iconUrl": "devicon-nodejs-plain"
+    },
+    {
+      "title": "CSS",
+      "iconUrl": "devicon-css3-plain"
+    }
+  ]
+}

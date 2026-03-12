@@ -1,35 +1,48 @@
-export type ApiResponse = {
+export type ProfileApiResponseType = {
   imageUrl: string;
   name: string;
   lastName: string;
   subtitle: string;
   aboutMe: string;
-  links: {
-    id: number;
-    title: string;
-    link: string;
-  }[];
-  projects: {
-    id: number;
-    title: string;
-    text: string;
-    imageUrl: string;
-    links: {
-      id: number;
-      title: string;
-      link: string;
-    }[];
-  }[];
-  certificates: {
-    id: number;
-    title: string;
-    imageUrl: string;
-    link: string;
-    pdfFileUrl: string;
-  }[];
-  skills: {
-    id: number;
-    title: string;
-    iconUrl: string;
-  }[];
+};
+
+export type ProfileLinkApiResponseType = {
+  id: number;
+  title: string;
+  link: string;
+};
+
+export type ProjectLinkApiResponseType = {
+  id: number;
+  title: string;
+  link: string;
+};
+
+export type ProjectApiResponseType = {
+  id: number;
+  title: string;
+  text: string;
+  imageUrl: string;
+  links: ProfileLinkApiResponseType[];
+};
+
+export type CertificateApiResponseType = {
+  id: number;
+  title: string;
+  imageUrl: string;
+  link: string;
+  pdfFileUrl: string;
+};
+
+export type SkillApiResponseType = {
+  id: number;
+  title: string;
+  iconUrl: string;
+};
+
+export type ApiResponse = ProfileApiResponseType & {
+  links: ProfileLinkApiResponseType[];
+  projects: ProfileApiResponseType[];
+  certificates: CertificateApiResponseType[];
+  skills: SkillApiResponseType[];
 };

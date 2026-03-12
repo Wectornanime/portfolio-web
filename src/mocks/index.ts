@@ -1,14 +1,14 @@
 /* eslint-disable no-console */
-import express, { Request, Response } from "express";
+import express from "express";
 
-import infoResponse from "./responses/info.json";
+import routerAdapter from "./router.adapter";
+import { router } from "./router";
 
 const app = express();
 const PORT = 3000;
+const routes = routerAdapter(router);
 
-app.get("/api/info", (_: Request, res: Response) => {
-  res.json({ data: infoResponse });
-});
+app.use(routes);
 
 app.listen(PORT, () => {
   console.log(`Mock server running at http://localhost:${PORT}`);

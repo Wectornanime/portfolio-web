@@ -42,7 +42,7 @@ export type SkillApiResponseType = {
 
 export type ApiResponse = ProfileApiResponseType & {
   links: ProfileLinkApiResponseType[];
-  projects: ProfileApiResponseType[];
+  projects: ProjectApiResponseType[];
   certificates: CertificateApiResponseType[];
   skills: SkillApiResponseType[];
 };

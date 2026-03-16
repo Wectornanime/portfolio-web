@@ -9,13 +9,30 @@ import {
   useDisclosure,
 } from "@heroui/react";
 import { OpenInNewRounded as OpenInNewRoundedIcon } from "@mui/icons-material";
+import { useEffect, useState } from "react";
 
 import ProjectsSection from "./sections/projects";
 
+import getUserInfo from "@/services/getUserInfo.service";
+import { ApiResponse } from "@/types/api";
+import Loading from "@/components/loading";
+
 export default function IndexPage() {
+  const [userInfo, setUserInfo] = useState<ApiResponse | undefined>(undefined);
+
+  const getData = async () => {
+    const data = await getUserInfo();
+
+    setUserInfo(data);
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-  return (
+  return userInfo ? (
     <>
       <main className="flex flex-col gap-8 px-8">
         <section className="flex justify-around items-center">
@@ -65,7 +82,7 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <ProjectsSection />
+        <ProjectsSection content={userInfo.projects} />
 
         <section className="flex flex-col full">
           <h3 className="text-xl mb-3 pl-6">Sobre mim</h3>
@@ -180,5 +197,7 @@ export default function IndexPage() {
         </ModalContent>
       </Modal>
     </>
+  ) : (
+    <Loading />
   );
 }

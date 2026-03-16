@@ -8,7 +8,7 @@ export type RouterType = {
 };
 
 export const router: RouterType = {
-  "/api/info": {
+  "/wectornanime": {
     method: "get",
     response: infoResponse,
   },

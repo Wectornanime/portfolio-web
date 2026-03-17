@@ -1,6 +1,5 @@
 import { Card, CardFooter } from "@heroui/card";
 import { Button, Image } from "@heroui/react";
-import { OpenInNewRounded as OpenInNewRoundedIcon } from "@mui/icons-material";
 import { useEffect, useState } from "react";
 
 import ProjectsSection from "./sections/projects";
@@ -10,6 +9,7 @@ import CertificatesSection from "./sections/certificates";
 import getUserInfo from "@/services/getUserInfo.service";
 import { ApiResponse } from "@/types/api";
 import Loading from "@/components/loading";
+import SomeLinksSection from "./sections/SomeLinks";
 
 export default function IndexPage() {
   const [userInfo, setUserInfo] = useState<ApiResponse | undefined>(undefined);
@@ -47,31 +47,7 @@ export default function IndexPage() {
         </div>
       </section>
 
-      <section className="full flex flex-col relative">
-        <h3 className="text-xl pl-6">Alguns Links</h3>
-        <div className="flex flex-wrap gap-2 justify-center mt-2 full">
-          <Button
-            as="a"
-            className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
-            href="https://google.com"
-            radius="sm"
-            target="_blank"
-          >
-            <p className="tracking-wide uppercase">Github</p>
-            <OpenInNewRoundedIcon fontSize="inherit" />
-          </Button>
-          <Button
-            as="a"
-            className="bg-default-300 text-default-600 transition-transform hover:-translate-y-2 text-large gap-5 items-center"
-            href="https://google.com"
-            radius="sm"
-            target="_blank"
-          >
-            <p className="tracking-wide uppercase">LinkedIn</p>
-            <OpenInNewRoundedIcon fontSize="inherit" />
-          </Button>
-        </div>
-      </section>
+      <SomeLinksSection content={userInfo.links} />
 
       <ProjectsSection content={userInfo.projects} />
 

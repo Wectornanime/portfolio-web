@@ -88,6 +88,10 @@
     {
       "title": "CSS",
       "iconUrl": "devicon-css3-plain"
+    },
+    {
+      "title": "AWS",
+      "iconUrl": "devicon-amazonwebservices-plain-wordmark"
     }
   ]
 }

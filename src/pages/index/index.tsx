@@ -16,6 +16,7 @@ import ProjectsSection from "./sections/projects";
 import getUserInfo from "@/services/getUserInfo.service";
 import { ApiResponse } from "@/types/api";
 import Loading from "@/components/loading";
+import SkillsSection from "./sections/skills";
 
 export default function IndexPage() {
   const [userInfo, setUserInfo] = useState<ApiResponse | undefined>(undefined);
@@ -123,23 +124,8 @@ export default function IndexPage() {
           </div>
         </section>
 
-        <section className="flex flex-col full">
-          <h3 className="text-xl mb-3 pl-6">Skills</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            {[...Array(21)].map((_, key) => (
-              <Tooltip
-                key={key}
-                showArrow
-                color="foreground"
-                content="Amazon Web Service"
-                radius="sm"
-                size="sm"
-              >
-                <i className="devicon-amazonwebservices-plain-wordmark text-4xl sm:text-6xl" />
-              </Tooltip>
-            ))}
-          </div>
-        </section>
+        <SkillsSection content={userInfo.skills} />
+
         <section className="flex flex-col full">
           <h3 className="text-xl mb-3 pl-6">Certificados</h3>
           <div className="group flex flex-wrap justify-center gap-4">

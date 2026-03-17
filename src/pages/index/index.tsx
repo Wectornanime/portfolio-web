@@ -1,15 +1,15 @@
-import { Card, CardFooter } from "@heroui/card";
-import { Button, Image } from "@heroui/react";
+import { Image } from "@heroui/react";
 import { useEffect, useState } from "react";
 
 import ProjectsSection from "./sections/projects";
 import SkillsSection from "./sections/skills";
 import CertificatesSection from "./sections/certificates";
+import SomeLinksSection from "./sections/someLinks";
+import AboutMe from "./sections/aboutMe";
 
 import getUserInfo from "@/services/getUserInfo.service";
 import { ApiResponse } from "@/types/api";
 import Loading from "@/components/loading";
-import SomeLinksSection from "./sections/SomeLinks";
 
 export default function IndexPage() {
   const [userInfo, setUserInfo] = useState<ApiResponse | undefined>(undefined);
@@ -51,44 +51,7 @@ export default function IndexPage() {
 
       <ProjectsSection content={userInfo.projects} />
 
-      <section className="flex flex-col full">
-        <h3 className="text-xl mb-3 pl-6">Sobre mim</h3>
-        <div className="flex flex-col items-center sm:flex-row gap-5">
-          <Card className="shrink-0 fit">
-            <Image
-              alt="Woman listing to music"
-              className="object-cover"
-              height={200}
-              src="https://heroui.com/images/hero-card.jpeg"
-              width={200}
-            />
-            <CardFooter className="absolute justify-center bottom-0 z-10 overflow-hidden">
-              <Button
-                className="text-small text-white bg-black/40"
-                color="default"
-                radius="sm"
-                size="sm"
-                variant="flat"
-              >
-                Download CV
-              </Button>
-            </CardFooter>
-          </Card>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-            excepturi aliquam debitis at maiores minima numquam molestias quod
-            dignissimos dolore tempore obcaecati quos consectetur, eaque rem
-            nulla atque, doloremque explicabo! Quas fugit illo placeat
-            cupiditate obcaecati veniam dolorem, tempora ullam inventore
-            pariatur neque totam cum accusantium maxime vitae, qui deleniti
-            quos. Quod itaque doloribus eos voluptatibus, vero earum veniam
-            labore? Autem beatae sequi deserunt. Tempora vero ut dolores
-            quisquam libero, sunt minus, est rerum sit voluptatem quas sint
-            dignissimos obcaecati eos aliquid. Harum aspernatur totam unde,
-            corrupti consectetur velit pariatur?
-          </p>
-        </div>
-      </section>
+      <AboutMe content={userInfo} />
 
       <SkillsSection content={userInfo.skills} />
 

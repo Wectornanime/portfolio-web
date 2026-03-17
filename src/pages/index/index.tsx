@@ -33,16 +33,16 @@ export default function IndexPage() {
               Hello. <br />
               {"Sou "}
             </span>
-            Wectornanime
+            {userInfo.name}
           </h1>
-          <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
+          <h2>{userInfo.subtitle}</h2>
         </div>
 
         <div className="shrink-0">
           <Image
-            alt="Woman listing to music"
+            alt={`${userInfo.name} ${userInfo.lastName}`}
             className="object-cover h-[150px] w-[150px] sm:h-[200px] sm:w-[200px]"
-            src="https://heroui.com/images/hero-card.jpeg"
+            src={userInfo.imageUrl}
           />
         </div>
       </section>

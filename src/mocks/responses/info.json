@@ -56,12 +56,14 @@
   ],
   "certificates": [
     {
+      "id": 1,
       "title": "React - Fundamentos",
       "imageUrl": "https://www.webdevelopersnotes.com/wp-content/uploads/random-image-display-using-javascript-2.png",
       "link": "https://certificates.com/react-fundamentals",
       "pdfFileUrl": "https://example.com/certificates/react-fundamentals.pdf"
     },
     {
+      "id": 2,
       "title": "Node.js Avançado",
       "imageUrl": "https://www.webdevelopersnotes.com/wp-content/uploads/random-image-display-using-javascript-2.png",
       "link": null,
@@ -70,26 +72,32 @@
   ],
   "skills": [
     {
+      "id": 1,
       "title": "JavaScript",
       "iconUrl": "devicon-javascript-plain"
     },
     {
+      "id": 2,
       "title": "TypeScript",
       "iconUrl": "devicon-typescript-plain"
     },
     {
+      "id": 3,
       "title": "React",
       "iconUrl": "devicon-react-original"
     },
     {
+      "id": 4,
       "title": "Node.js",
       "iconUrl": "devicon-nodejs-plain"
     },
     {
+      "id": 5,
       "title": "CSS",
       "iconUrl": "devicon-css3-plain"
     },
     {
+      "id": 6,
       "title": "AWS",
       "iconUrl": "devicon-amazonwebservices-plain-wordmark"
     }
